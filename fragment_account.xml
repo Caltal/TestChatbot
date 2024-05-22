@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".view.LoginActivity" android:orientation="vertical" android:background="@color/white">
+
+    <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp" android:id="@+id/avatar"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/choosing_avatar" android:layout_marginBottom="8dp"
+            android:layout_gravity="center_horizontal"/>
+    <include layout="@layout/layout_barcode"
+        android:id="@+id/layout_barcode"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="20dp"/>
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginStart="40dp" android:layout_marginEnd="40dp">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_weight="1">
+            <TextView
+                    android:text="Tổng chi tiêu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/textView34" android:textSize="13sp"
+                    android:gravity="center_horizontal"/>
+            <TextView
+                    android:text="0 đ"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/expense" android:textSize="22sp"
+                    android:gravity="center_horizontal"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_weight="1">
+            <TextView
+                    android:text="Điểm thưởng"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/textView36"
+                    android:gravity="center_horizontal"/>
+            <TextView
+                    android:text="0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/point" android:textSize="22sp"
+                    android:gravity="center_horizontal"/>
+        </LinearLayout>
+    </LinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginStart="30dp" android:layout_marginEnd="30dp"
+            android:layout_marginTop="8dp" android:layout_marginBottom="8dp">
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/imageView2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/svip_icon" app:layout_constraintBottom_toTopOf="@id/progressBar"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.8"/>
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/imageView3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/vip_icon" app:layout_constraintBottom_toTopOf="@id/progressBar"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.3"/>
+
+        <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                android:layout_height="30dp"
+                android:layout_width="match_parent"
+                app:rcBackgroundColor="#B4B4B4"
+                android:id="@+id/progressBar"
+                app:rcMax="10000000"
+                app:rcProgressColor="#23A8F3"
+                android:progress="3000000"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/imageView2" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        <TextView
+                android:text="3.000.000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/textView33"
+                app:layout_constraintTop_toBottomOf="@id/progressBar" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.275"
+                android:layout_marginTop="4dp"/>
+        <TextView
+                android:text="8.000.000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/textView45"
+                app:layout_constraintTop_toBottomOf="@id/progressBar" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.843"
+                android:layout_marginTop="4dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="200dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="200dp" android:orientation="vertical">
+            <TextView
+                    android:textSize="15sp" android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:textColor="@color/black"
+                    android:text="Họ tên: Lê Thành Doanh"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" android:id="@+id/name" android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"/>
+            <TextView
+                    android:textSize="15sp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:textColor="@color/black"
+                    android:text="Số điện thoại: 0975464123 "
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" android:id="@+id/phone"
+                    android:gravity="center_vertical"/>
+            <TextView
+                    android:textSize="15sp" android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:textColor="@color/black"
+                    android:text="Email: test@gmail.com"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" android:id="@+id/email" android:gravity="clip_vertical|center_vertical"/>
+            <TextView
+                    android:textSize="15sp" android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:textColor="@color/black"
+                    android:text="Ngày sinh: 02/10/2004 "
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" android:id="@+id/birthdate"
+                    android:gravity="center_vertical"/>
+            <TextView
+                    android:textSize="15sp" android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:textColor="@color/black"
+                    android:text="Giới tính: Nam"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" android:id="@+id/sex" android:gravity="center_vertical"/>
+            <TextView
+                    android:textSize="15sp" android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:textColor="@color/black"
+                    android:text="Khu vực: Hà Nội"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" android:id="@+id/textView43" android:gravity="center_vertical"/>
+            <TextView
+                    android:textSize="15sp" android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:textColor="@color/black"
+                    android:text="Rạp yêu thích:"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" android:id="@+id/textView44" android:gravity="center_vertical"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+            android:text="CHỈNH SỬA" android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/editing_button" android:padding="12dp"
+            android:layout_marginStart="40dp" android:layout_marginEnd="40dp"
+            android:layout_marginTop="20dp"/>
+
+</LinearLayout>

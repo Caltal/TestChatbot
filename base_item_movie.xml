@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Card View widget-->
+<androidx.cardview.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        card_view:cardElevation="0dp"
+        card_view:contentPadding="8dp">
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="225dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center_horizontal"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardElevation="6dp">
+
+            <ImageView
+                android:id="@+id/poster"
+                android:layout_width="225dp"
+                android:layout_height="300dp"
+                android:scaleType="centerCrop" />
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:id="@+id/movie_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="300dp"
+                android:maxLines="1"
+                android:text="Matrix"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/movie_censor"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectangle_line"
+                android:text="K"
+                android:textSize="10sp"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/movie_duration"
+                  android:layout_gravity="center_horizontal"
+                  android:text=" 1 giờ 30 phút"
+                  android:layout_marginTop="4dp"
+                  android:textColor="@color/textGrey"
+                  android:drawableStart="@drawable/movie_length"
+                  android:textSize="15sp"/>
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>

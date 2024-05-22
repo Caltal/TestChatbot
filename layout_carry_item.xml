@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="120dp" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView android:layout_width="80dp" android:layout_height="100dp"
+                                       app:cardCornerRadius="8dp" android:elevation="4dp"
+                                       android:layout_gravity="center_vertical">
+        <ImageView android:layout_width="match_parent" android:layout_height="match_parent"
+                   android:id="@+id/image" android:src="@drawable/baby" android:scaleType="centerCrop"/>
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                  android:orientation="vertical" android:layout_marginStart="10dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:text="Combo 1 người - 79.000đ" android:textColor="@color/black" android:textSize="20sp"
+                  android:textStyle="bold" android:id="@+id/name"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:text="1 Bắp + 1 Nước.\n* Miễn phí đổi vị bắp và miễn phí chọn loại nước" android:textColor="@color/black" android:textSize="16sp"
+                  android:id="@+id/details"/>
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="30dp"
+                      android:orientation="horizontal" android:layout_gravity="end">
+            <androidx.cardview.widget.CardView android:layout_width="40dp" android:layout_height="30dp"
+                                               app:cardCornerRadius="6dp">
+                <TextView android:layout_width="40dp" android:layout_height="30dp" android:text="Bớt" android:textSize="16sp"
+                          android:textColor="@color/textGrey" android:layout_gravity="center" android:background="@color/softPink"
+                          android:textAlignment="gravity" android:gravity="center" android:id="@+id/minus"/>
+            </androidx.cardview.widget.CardView>
+
+            <TextView android:layout_width="50dp" android:layout_height="30dp" android:text="0" android:textSize="15sp"
+                      android:textColor="@color/textGrey" android:layout_gravity="center" android:id="@+id/total"
+                      android:textAlignment="gravity" android:gravity="center"/>
+
+            <androidx.cardview.widget.CardView android:layout_width="50dp" android:layout_height="30dp"
+                                               app:cardCornerRadius="6dp">
+
+                <TextView
+                    android:id="@+id/add"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@color/blue"
+                    android:gravity="center"
+                    android:text="Thêm"
+                    android:textAlignment="gravity"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

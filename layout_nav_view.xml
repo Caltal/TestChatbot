@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:padding="16dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        android:orientation="vertical"
+        android:gravity="top">
+
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:orientation="horizontal" android:layout_marginTop="32dp">
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                app:srcCompat="@drawable/notification_icon"
+                android:contentDescription="@string/nav_header_desc"
+                android:id="@+id/notification" app:layout_constraintEnd_toStartOf="@id/imageView"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="@id/imageView"
+                android:layout_marginEnd="32dp"/>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="76dp"
+            android:layout_height="76dp"
+            android:contentDescription="@string/nav_header_desc"
+            android:padding="8dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/account_icon" />
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                app:srcCompat="@drawable/setting_icon"
+                android:contentDescription="@string/nav_header_desc"
+                android:id="@+id/settings" app:layout_constraintBottom_toBottomOf="@id/imageView"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toEndOf="@id/imageView"
+                android:layout_marginStart="32dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/nav_header_vertical_spacing"
+            android:textSize="18sp"
+            android:textColor="@color/greyDarker"
+            android:text="@string/nav_header_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" android:layout_gravity="center_horizontal"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/greyBackground">
+        <include layout="@layout/layout_barcode"
+            android:id="@+id/layout_barcode"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" />
+    </LinearLayout>
+
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:layout_marginTop="16dp" android:paddingBottom="16dp" android:elevation="2dp">
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:orientation="vertical" android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Tổng chi tiêu" android:textColor="@color/greyDarker"
+                android:textSize="15sp" android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:id="@+id/expense"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="0 đ" android:textColor="@color/greyBackground"
+                android:textSize="18sp" android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:orientation="vertical" android:layout_weight="1">
+            <TextView
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Điểm thưởng" android:textColor="@color/greyDarker"
+                    android:textSize="15sp" android:layout_gravity="center_horizontal"/>
+            <TextView
+                    android:id="@+id/point"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="0" android:textColor="@color/greyBackground"
+                    android:textSize="18sp" android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/greyDarker"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:paddingStart="8dp" android:paddingEnd="8dp" android:paddingTop="24dp" android:paddingBottom="24dp">
+        <TextView
+                android:text="Tài khoản" android:textColor="@color/greyBackground" android:textSize="15sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/accountInfo"
+                android:drawableTop="@drawable/account_info" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/events" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginBottom="24dp"/>
+        <TextView
+                android:text="Rạp phim" android:textColor="@color/greyBackground" android:textSize="15sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/cinemas"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/events"
+                app:layout_constraintStart_toEndOf="@id/accountInfo" app:layout_constraintEnd_toStartOf="@id/myTicket"
+                android:layout_marginBottom="24dp" android:drawableTop="@drawable/cinema_icon"/>
+        <TextView
+                android:text="Thông tin" android:textColor="@color/greyBackground" android:textSize="15sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/info"
+                android:drawableTop="@drawable/info_icon" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="32dp"/>
+        <TextView
+                android:text="Tin mới &amp; Ưu đãi" android:textColor="@color/greyBackground" android:textSize="15sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/events"
+                android:drawableTop="@drawable/gift_icon" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" android:layout_marginStart="8dp"/>
+        <TextView
+                android:text="Vé của tôi" android:textColor="@color/greyBackground" android:textSize="15sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/myTicket"
+                android:drawableTint="@color/greyBackground"
+                android:drawableTop="@drawable/ticket_button" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/events" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="24dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="100dp"
+            android:background="@color/greyDarker"/>
+
+    <TextView
+            android:id="@+id/logOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đăng xuất"
+            android:textSize="16sp" android:textColor="@color/greyBackground"
+            android:padding="8dp" android:layout_gravity="center_horizontal"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/greyDarker"/>
+</LinearLayout>
